@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Caveat';
+    src: url('../../../public/fonts/Caveat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.hero{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    color: white;
+    height: 50vh;
+    font-size: 120px;
+    font-weight: 500;
+    background: linear-gradient(90deg, rgb(118, 65, 0) .03%, #ffffff 97%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Caveat',sans-serif;
+}
+.head{
+    font-family: 'Caveat',sans-serif;
+}
