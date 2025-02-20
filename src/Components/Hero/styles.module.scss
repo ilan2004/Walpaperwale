@@ -3,21 +3,52 @@
     src: url('../../../public/fonts/Caveat-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
-.hero{
+}
+
+.hero {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
     height: 50vh;
-    font-size: 120px;
+    font-size: 10vw; /* Use vw for responsiveness */
     font-weight: 500;
     background: linear-gradient(90deg, rgb(118, 65, 0) .03%, #ffffff 97%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Caveat',sans-serif;
+    font-family: 'Caveat', sans-serif;
+    padding: 0 5%; /* Adds padding for smaller screens */
+    word-wrap: break-word;
 }
-.head{
-    font-family: 'Caveat',sans-serif;
+.head {
+    font-family: 'Caveat', sans-serif;
+    font-size: 8vw; /* Adjust font size relative to viewport width */
 }
+
+/* Adjust font size and spacing for smaller screens */
+@media (max-width: 1024px) {
+    .hero {
+        font-size: 8vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        font-size: 12vw;
+    }
+    .head {
+        font-family: 'Caveat', sans-serif;
+        font-size: 16vw; /* Adjust font size relative to viewport width */
+    }
+}
+
+
+
+/* Additional responsive styles if needed */
