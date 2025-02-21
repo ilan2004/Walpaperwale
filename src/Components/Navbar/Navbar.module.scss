@@ -1,0 +1,271 @@
+// Variables
+$color-primary: #582c04;
+$color-secondary: #f90;
+$color-text: #000;
+$color-text-light: #b0b0b0;
+$color-background: #fff;
+$color-link: #4da6ff;
+$font-cormorant: 'Cormorant Garamond', serif;
+$transition-speed: 0.3s;
+
+// Mixins
+@mixin font-face($family, $filename, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('../../../public/fonts/#{$filename}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Font Face Definitions
+@include font-face('Cormorant Garamond', 'CormorantGaramond-Regular');
+@include font-face('Cormorant Garamond', 'CormorantGaramond-Italic', normal, italic);
+@include font-face('Cormorant Garamond', 'CormorantGaramond-Medium', 500);
+@include font-face('Cormorant Garamond', 'CormorantGaramond-MediumItalic', 500, italic);
+@include font-face('Cormorant Garamond', 'CormorantGaramond-SemiBoldItalic', 600, italic);
+
+// Navbar Styles
+.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: $transition-speed ease-in-out;
+  border-bottom: 2px solid transparent;
+  background-color: $color-background;
+  font-family: $font-cormorant;
+  font-weight: 500;
+  font-style: italic;
+
+  &.scrolled {
+    padding: 16px 0;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 18px 0 rgba(129, 162, 182, 0.2);
+  }
+
+  .container {
+    @include flex-center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    height: auto;
+    transition: width $transition-speed ease;
+  }
+
+  .navbarCollapse {
+    display: flex;
+    align-items: center;
+  }
+
+  .navLinks {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navLink {
+    font-weight: 400;
+    font-style: italic;
+    color: $color-text;
+    letter-spacing: 0.8px;
+    padding: 0 25px;
+    font-size: 18px;
+    opacity: 0.75;
+    transition: opacity $transition-speed ease;
+    text-decoration: none;
+
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .button {
+    background-color: $color-primary;
+    color: $color-background;
+    border-radius: 8px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 16px 32px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: all $transition-speed ease-out;
+    margin-left: 25px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      transition: left $transition-speed ease-out;
+    }
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+      color: $color-background;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      &::before {
+        left: 100%;
+      }
+    }
+  }
+
+  .navbarToggler {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $color-primary;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
+
+// Footer Styles
+.footer {
+  @include flex-center;
+  margin-bottom: 6rem;
+  background-color: $color-background;
+  color: $color-text;
+  padding: 2rem 0;
+  margin-top: 30vh;
+  border-top: 2px groove $color-background;
+  font-family: $font-cormorant;
+  font-weight: 400;
+
+  .footerColumn {
+    font-weight: 500;
+  }
+
+  .linkList {
+    font-style: italic;
+    color: $color-text-light;
+  }
+
+  .link {
+    transition: color $transition-speed ease;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+
+  .contactValue {
+    font-weight: 600;
+    font-style: italic;
+    color: $color-link;
+  }
+
+  .socialLink {
+    transition: opacity $transition-speed ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.875rem;
+    color: $color-text-light;
+  }
+}
+
+// Media Queries
+@media screen and (max-width: 991px) {
+  .navbar {
+    .navbarCollapse {
+      display: none;
+    }
+
+    .navbarToggler {
+      display: block;
+    }
+
+    .mobileMenu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(24, 24, 24, 0.95);
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .mobileNavLink {
+      font-weight: 400;
+      font-size: 24px;
+      color: $color-background;
+      padding: 20px 0;
+      text-decoration: none;
+      opacity: 0.75;
+      transition: opacity $transition-speed ease;
+      text-align: center;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .mobileButton {
+      margin-top: 30px;
+      font-size: 1rem;
+      padding: 18px 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 12px 0;
+
+    &.scrolled {
+      padding: 10px 0;
+    }
+
+    .logo {
+      width: 60px;
+    }
+
+    .mobileNavLink {
+      font-size: 20px;
+      padding: 15px 0;
+    }
+
+    .mobileButton {
+      font-size: 0.875rem;
+      padding: 16px 32px;
+    }
+  }
+}
+

@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
-import styles from "./Navbar.module.css"
+import styles from "./Navbar.module.scss"
 
 const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
