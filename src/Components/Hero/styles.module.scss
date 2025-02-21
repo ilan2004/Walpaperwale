@@ -1,98 +1,76 @@
-@font-face {
-    font-family: 'Caveat';
-    src: url('../../../public/fonts/Caveat-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Cormorant-Regular';
-    src: url('../../../public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Cormorant-Italic';
-    src: url('../../../public/fonts/CormorantGaramond-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-  }
-  
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #181818;
-    height: 70vh;
-    font-family: 'Cormorant-Italic', serif;
-  }
-  
-  
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #181818;
+  height: 70vh;
+  font-family: var(--font-cormorant-garamond), serif;
+}
+
+.head {
+  font-family: var(--font-cormorant-garamond), serif;
+  font-weight: 600; // Semi-Bold
+  font-style: italic;
+  font-size: 10vw; /* Larger for more emphasis */
+  margin: 0;
+  color: #582c04;
+  letter-spacing: 2px;
+}
+
+.des {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  padding: 0% 5%;
+}
+
+.description {
+  font-family: var(--font-cormorant-sans), cursive;
+  font-size: 2vw;
+  font-style: italic;
+  margin-top: 20px;
+  color: #3d3d3d;
+  line-height: 1.5;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
   .head {
-    font-family: 'Cormorant-SemiBoldItalic', serif;
-    font-size: 10vw; /* Larger for more emphasis */
-    margin: 0;
-    color: #582c04;
-    letter-spacing: 2px;
+    font-size: 10vw;
   }
-  .des{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-width: 800px;
-    padding: 0% 5%;
 
-  }
   .description {
-    font-family: 'Caveat', cursive;
-    font-size: 2vw;
-    margin-top: 20px;
-    color: #3d3d3d;
-    line-height: 1.5;
+    font-size: 3vw;
+  }
+}
 
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
 
+  .head {
+    font-size: 9vw;
+  }
 
+  .description {
+    font-size: 4vw;
   }
-  
-  /* Responsiveness */
-  @media (max-width: 1024px) {
-    .head {
-      font-size: 10vw;
-    }
-  
-    .description {
-      font-size: 3vw;
-    }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 50vh;
   }
-  
-  @media (max-width: 768px) {
-    .hero {
-      height: 60vh;
-    }
-  
-    .head {
-      font-size: 9vw;
-    }
-  
-    .description {
-      font-size: 4vw;
-    }
+
+  .head {
+    font-size: 16vw;
   }
-  
-  @media (max-width: 480px) {
-    .hero {
-      height: 50vh;
-    }
-  
-    .head {
-      font-size: 16vw;
-    }
-  
-    .description {
-      font-size: 5vw;
-    }
+
+  .description {
+    font-size: 5vw;
   }
-  
+}

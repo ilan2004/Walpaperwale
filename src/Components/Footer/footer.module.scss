@@ -1,34 +1,3 @@
-@font-face {
-  font-family: 'Cormorant-Regular';
-  src: url('../../../public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Cormorant-Italic';
-  src: url('../../../public/fonts/CormorantGaramond-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Cormorant-Medium';
-  src: url('../../../public/fonts/CormorantGaramond-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Cormorant-SemiBoldItalic';
-  src: url('../../../public/fonts/CormorantGaramond-SemiBoldItalic.ttf') format('truetype');
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Cormorant-MediumItalic';
-  src: url('../../../public/fonts/CormorantGaramond-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
-}
-
 /* ====================== FOOTER STYLING ====================== */
 .footer {
   display: flex;
@@ -41,7 +10,7 @@
   margin-top: 30vh;
   border-top: #fff;
   border-style: groove;
-  font-family: 'Cormorant-Regular', serif;
+  font-family: var(--font-cormorant-garamond), serif;
 }
 
 /* ====================== CONTAINER ====================== */
@@ -52,7 +21,7 @@
   flex-direction: column;
   gap: 3.5rem;
   padding: 0 2rem;
-  font-family: 'Cormorant-Regular', serif;
+  font-family: var(--font-cormorant-garamond), serif;
 }
 
 /* ====================== TOP SECTION ====================== */
@@ -62,7 +31,8 @@
   align-items: start;
   justify-content: center;
   gap: 10%;
-  font-family: 'Cormorant-Medium', serif;
+  font-family: var(--font-cormorant-garamond), serif;
+  font-weight: 500; /* Medium */
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -71,7 +41,9 @@
 
 .logo {
   margin-bottom: 2rem;
-  font-family: 'Cormorant-SemiBoldItalic', serif;
+  font-family: var(--font-cormorant-garamond), serif;
+  font-weight: 600; /* SemiBold */
+  font-style: italic;
   font-size: 2rem;
 }
 
@@ -89,7 +61,7 @@
   flex-direction: column;
   gap: 1.25rem;
   max-width: 100%;
-  font-family: 'Cormorant-Regular', serif;
+  font-family: var(--font-cormorant-garamond), serif;
 
   @media (min-width: 640px) {
     max-width: 250px;
@@ -98,9 +70,9 @@
 
 .columnTitle {
   font-size: 1.125rem;
-  font-weight: bold;
-  white-space: nowrap;
-  font-family: 'Cormorant-MediumItalic', serif;
+  font-weight: 500;
+  font-style: italic;
+  font-family: var(--font-cormorant-garamond), serif;
 }
 
 .linkList {
@@ -114,7 +86,8 @@
   text-decoration: none;
   color: #582c04;
   transition: color 0.3s ease-in-out;
-  font-family: 'Cormorant-Italic', serif;
+  font-family: var(--font-cormorant-garamond), serif;
+  font-style: italic;
 
   &:hover {
     color: #3e2004;
@@ -126,7 +99,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  font-family: 'Cormorant-Regular', serif;
+  font-family: var(--font-cormorant-garamond), serif;
 }
 
 .contactLink {
@@ -144,14 +117,16 @@
 
 .contactLabel {
   flex-shrink: 0;
-  font-family: 'Cormorant-Medium', serif;
+  font-family: var(--font-cormorant-garamond), serif;
+  font-weight: 500; /* Medium */
 }
 
 .contactValue {
   font-size: 1rem;
   color: #4da6ff;
   word-break: break-word;
-  font-family: 'Cormorant-Italic', serif;
+  font-family: var(--font-cormorant-garamond), serif;
+  font-style: italic;
 }
 
 /* ====================== SOCIAL SECTION ====================== */
@@ -159,7 +134,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  font-family: 'Cormorant-Regular', serif;
+  font-family: var(--font-cormorant-garamond), serif;
 }
 
 .socialIcons {
@@ -186,5 +161,7 @@
   text-align: center;
   font-size: 0.875rem;
   color: #41250b;
-  font-family: 'Cormorant-MediumItalic', serif;
+  font-family: var(--font-cormorant-garamond), serif;
+  font-weight: 500; /* Medium */
+  font-style: italic;
 }

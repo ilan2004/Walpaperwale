@@ -5,32 +5,17 @@ $color-text: #000;
 $color-text-light: #b0b0b0;
 $color-background: #fff;
 $color-link: #4da6ff;
-$font-cormorant: 'Cormorant Garamond', serif;
 $transition-speed: 0.3s;
 
-// Mixins
-@mixin font-face($family, $filename, $weight: normal, $style: normal) {
-  @font-face {
-    font-family: $family;
-    src: url('../../../public/fonts/#{$filename}.ttf') format('truetype');
-    font-weight: $weight;
-    font-style: $style;
-    font-display: swap;
-  }
-}
+// Since fonts are now imported via layout.js, we define the font family variable to use the CSS variable.
+$font-cormorant: var(--font-cormorant-garamond), serif;
 
+// Utility Mixins
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-// Font Face Definitions
-@include font-face('Cormorant Garamond', 'CormorantGaramond-Regular');
-@include font-face('Cormorant Garamond', 'CormorantGaramond-Italic', normal, italic);
-@include font-face('Cormorant Garamond', 'CormorantGaramond-Medium', 500);
-@include font-face('Cormorant Garamond', 'CormorantGaramond-MediumItalic', 500, italic);
-@include font-face('Cormorant Garamond', 'CormorantGaramond-SemiBoldItalic', 600, italic);
 
 // Navbar Styles
 .navbar {
@@ -268,4 +253,3 @@ $transition-speed: 0.3s;
     }
   }
 }
-
