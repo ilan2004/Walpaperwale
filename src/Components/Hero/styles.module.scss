@@ -3,52 +3,96 @@
     src: url('../../../public/fonts/Caveat-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-
-.hero {
+  }
+  
+  @font-face {
+    font-family: 'Cormorant-Regular';
+    src: url('../../../public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Cormorant-Italic';
+    src: url('../../../public/fonts/CormorantGaramond-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
-    height: 50vh;
-    font-size: 10vw; /* Use vw for responsiveness */
-    font-weight: 500;
-    background: linear-gradient(90deg, rgb(118, 65, 0) .03%, #ffffff 97%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Caveat', sans-serif;
-    padding: 0 5%; /* Adds padding for smaller screens */
-    word-wrap: break-word;
-}
-.head {
-    font-family: 'Caveat', sans-serif;
-    font-size: 8vw; /* Adjust font size relative to viewport width */
-}
+    color: #181818;
+    height: 70vh;
+    font-family: 'Cormorant-Italic', serif;
+  }
+  
+  
+  .head {
+    font-family: 'Cormorant-SemiBoldItalic', serif;
+    font-size: 10vw; /* Larger for more emphasis */
+    margin: 0;
+    color: #582c04;
+    letter-spacing: 2px;
+  }
+  .des{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    padding: 0% 5%;
 
-/* Adjust font size and spacing for smaller screens */
-@media (max-width: 1024px) {
-    .hero {
-        font-size: 8vw;
-    }
-}
+  }
+  .description {
+    font-family: 'Caveat', cursive;
+    font-size: 2vw;
+    margin-top: 20px;
+    color: #3d3d3d;
+    line-height: 1.5;
 
-@media (max-width: 768px) {
-    .hero {
-        font-size: 6vw;
-    }
-}
 
-@media (max-width: 480px) {
-    .hero {
-        font-size: 12vw;
-    }
+
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 1024px) {
     .head {
-        font-family: 'Caveat', sans-serif;
-        font-size: 16vw; /* Adjust font size relative to viewport width */
+      font-size: 10vw;
     }
-}
-
-
-
-/* Additional responsive styles if needed */
+  
+    .description {
+      font-size: 3vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 60vh;
+    }
+  
+    .head {
+      font-size: 9vw;
+    }
+  
+    .description {
+      font-size: 4vw;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      height: 50vh;
+    }
+  
+    .head {
+      font-size: 16vw;
+    }
+  
+    .description {
+      font-size: 5vw;
+    }
+  }
+  

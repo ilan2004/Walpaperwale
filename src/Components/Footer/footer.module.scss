@@ -1,140 +1,190 @@
+@font-face {
+  font-family: 'Cormorant-Regular';
+  src: url('../../../public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant-Italic';
+  src: url('../../../public/fonts/CormorantGaramond-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cormorant-Medium';
+  src: url('../../../public/fonts/CormorantGaramond-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant-SemiBoldItalic';
+  src: url('../../../public/fonts/CormorantGaramond-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cormorant-MediumItalic';
+  src: url('../../../public/fonts/CormorantGaramond-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* ====================== FOOTER STYLING ====================== */
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 6rem;
-    background-color: rgb(24, 24, 24);
-    color: white;
-    padding: 2rem 0;
-    margin-top:30vh;
-    border-top: #fff;
-    border-style:groove; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+  background-color: rgb(255, 255, 255);
+  color: #2d1601;
+  padding: 2rem 0;
+  margin-top: 30vh;
+  border-top: #fff;
+  border-style: groove;
+  font-family: 'Cormorant-Regular', serif;
+}
+
+/* ====================== CONTAINER ====================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 0 2rem;
+  font-family: 'Cormorant-Regular', serif;
+}
+
+/* ====================== TOP SECTION ====================== */
+.topSection {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10%;
+  font-family: 'Cormorant-Medium', serif;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
-  
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
-    padding: 0 2rem;
+}
+
+.logo {
+  margin-bottom: 2rem;
+  font-family: 'Cormorant-SemiBoldItalic', serif;
+  font-size: 2rem;
+}
+
+/* ====================== LINKS SECTION ====================== */
+.linksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 100%;
+  font-family: 'Cormorant-Regular', serif;
+
+  @media (min-width: 640px) {
+    max-width: 250px;
   }
-  
-  .topSection {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 10%;
-    
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
+}
+
+.columnTitle {
+  font-size: 1.125rem;
+  font-weight: bold;
+  white-space: nowrap;
+  font-family: 'Cormorant-MediumItalic', serif;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #582c04;
+}
+
+.link {
+  text-decoration: none;
+  color: #582c04;
+  transition: color 0.3s ease-in-out;
+  font-family: 'Cormorant-Italic', serif;
+
+  &:hover {
+    color: #3e2004;
   }
-  
-  .logo {
-    margin-bottom: 2rem;
+}
+
+/* ====================== CONTACT SECTION ====================== */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-family: 'Cormorant-Regular', serif;
+}
+
+.contactLink {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #582c04;
   }
-  
-  .linksContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    justify-content: space-between;
-    flex-grow: 1;
+}
+
+.contactLabel {
+  flex-shrink: 0;
+  font-family: 'Cormorant-Medium', serif;
+}
+
+.contactValue {
+  font-size: 1rem;
+  color: #4da6ff;
+  word-break: break-word;
+  font-family: 'Cormorant-Italic', serif;
+}
+
+/* ====================== SOCIAL SECTION ====================== */
+.socialsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-family: 'Cormorant-Regular', serif;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
   }
-  
-  .footerColumn {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    max-width: 100%;
-    
-    @media (min-width: 640px) {
-      max-width: 250px;
-    }
-  }
-  
-  .columnTitle {
-    font-size: 1.125rem;
-    font-weight: bold;
-    white-space: nowrap;
-  }
-  
-  .linkList {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: #b0b0b0;
-  }
-  
-  .link {
-    text-decoration: none;
-    color: #b0b0b0;
-    transition: color 0.3s ease-in-out;
-  
-    &:hover {
-      color: #ffffff;
-    }
-  }
-  
-  .contactSection {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-  
-  .contactLink {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    max-width: 100%;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  
-    &:hover {
-      color: #ffffff;
-    }
-  }
-  
-  .contactLabel {
-    flex-shrink: 0;
-  }
-  
-  .contactValue {
-    font-size: 1rem;
-    color: #4da6ff;
-    word-break: break-word;
-  }
-  
-  .socialsSection {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-  
-  .socialIcons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .socialLink {
-    transition: opacity 0.3s ease-in-out;
-  
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-  
-  .divider {
-    width: 100%;
-    height: 1px;
-    background-color: #606060;
-  }
-  
-  .copyright {
-    text-align: center;
-    font-size: 0.875rem;
-    color: #b0b0b0;
-  }
-  
+}
+
+/* ====================== DIVIDER & COPYRIGHT ====================== */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #606060;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #41250b;
+  font-family: 'Cormorant-MediumItalic', serif;
+}

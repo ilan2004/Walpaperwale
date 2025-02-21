@@ -1,64 +1,122 @@
-.aboutus {
-    background-color: #1a1a1a; // Dark background
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+@font-face {
+  font-family: 'Cormorant-Regular';
+  src: url('../../../public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant-Italic';
+  src: url('../../../public/fonts/CormorantGaramond-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cormorant-Medium';
+  src: url('../../../public/fonts/CormorantGaramond-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant-SemiBoldItalic';
+  src: url('../../../public/fonts/CormorantGaramond-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cormorant-MediumItalic';
+  src: url('../../../public/fonts/CormorantGaramond-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+
+  @media (min-width: 640px) {
+    padding: 4rem 1.5rem;
   }
-  
-  .container {
-    max-width: 800px;
-    width: 100%;
+
+  @media (min-width: 1024px) {
+    padding: 4rem 2rem;
+  }
+}
+
+.title {
+  font-family: 'Cormorant-SemiBoldItalic', serif;
+  font-size: 4.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #582c04;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+.introduction {
+  font-family: 'Cormorant-Italic', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.75;
+  color: #582c04;
+  max-width: 90%;
+  margin: 0 auto 4rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #E5E7EB;
+  margin: 4rem 0;
+}
+
+.missionWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 3rem;
+}
+
+.mission {
+  font-family: 'Cormorant-Medium', serif;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #582c04;
+  max-width: 60%;
+  text-align: right;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
     text-align: center;
   }
-  
-  .head {
-    color: #6D7D7D;
-    font-family: "Kanit", Sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 4.3px;
-    margin: 0 0 1rem 0;
-    position: relative;
-    display: inline-block;
-  
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -0.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 50px;
-      height: 2px;
-      background-color: #6D7D7D;
-    }
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    justify-content: center;
   }
-  
-  .heading {
-    color: #FFFFFF;
-    margin: 0 0 1.5rem 0;
-    font-family: "Kanit", Sans-serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  
-    @media (max-width: 768px) {
-      font-size: 2rem;
-    }
+}
+
+.button {
+  font-family: 'Cormorant-Regular', serif;
+  font-size: 1rem;
+  color: #582c04;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #582c04;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #582c04;
+    color: white;
   }
-  
-  .about {
-    color: #FFFFFF;
-    font-family: "Nunito", Sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-    opacity: 0.9;
-  }
-  
-  
+}

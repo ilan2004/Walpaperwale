@@ -5,7 +5,7 @@ import Lenis from '@studio-freight/lenis'
 import styles from './page.module.scss'
 import Navsite from "@/Components/Navbar/Page";
 import { Hero } from "@/Components/Hero/Hero";
-import { About } from "@/Components/About/page";
+import About from "@/Components/About/page";
 import Footer from "@/Components/Footer/Footer";
 import Services from "@/Components/Services/Services";
 import { ServerIcon } from "lucide-react";

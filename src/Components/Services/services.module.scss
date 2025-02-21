@@ -1,77 +1,119 @@
-.servicesSection {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    padding: 6rem 0;
-    background-color: rgb(24, 24, 24);
+@font-face {
+  font-family: 'Cormorant-Regular';
+  src: url('../../../public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant-Italic';
+  src: url('../../../public/fonts/CormorantGaramond-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cormorant-Medium';
+  src: url('../../../public/fonts/CormorantGaramond-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant-SemiBoldItalic';
+  src: url('../../../public/fonts/CormorantGaramond-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cormorant-MediumItalic';
+  src: url('../../../public/fonts/CormorantGaramond-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  
+  @media (min-width: 640px) {
+    padding: 4rem 1.5rem;
   }
   
-  .container {
-    max-width: 1200px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @media (min-width: 1024px) {
+    padding: 4rem 2rem;
   }
+}
+
+.title {
+  font-family: 'Cormorant-SemiBoldItalic', serif;
+  font-size: 3.75rem;
+  margin-bottom: 4rem;
+  color: #582c04;
+}
+
+.grid {
+  display: grid;
+  gap: 4rem;
+}
+
+.introSection {
+  display: grid;
+  gap: 2rem;
   
-  .title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 2.5rem;
+  @media (min-width: 768px) {
+    grid-template-columns: 200px 1fr;
+    align-items: start;
   }
+}
+
+.subtitle {
+  font-family: 'Cormorant-Italic', serif;
+  font-style: italic;
+  font-size: 2rem;
+  color: #582c04;
+}
+
+.description {
+  color: #4B5563;
+  font-family: 'Cormorant-Regular', serif;
+  font-size: 1.4rem;
+  line-height: 1.75;
+}
+
+.servicesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.serviceItem {
+  position: relative;
   
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    width: 100%;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #E5E7EB;
+    margin-bottom: -1rem;
   }
-  
-  .featureItem {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-  }
-  
-  .iconContainer {
-    background-color: #4a4a4a;
-    padding: 1rem;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: #5a5a5a;
-    }
-  }
-  
-  .featureTitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-transform: capitalize;
-    color: #ffffff;
-  }
-  
-  .featureDescription {
-    font-size: 1rem;
-    color: #b0b0b0;
-    margin-bottom: 0.75rem;
-    line-height: 1.6;
-  
-    strong {
-      color: #ffffff;
-    }
-  }
-  
+}
+
+.serviceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #582c04;
+}
+
+.serviceName {
+  font-family: 'Cormorant-Medium', serif;
+  font-size: 3rem;
+}
+
+.serviceDescription {
+  font-family: 'Cormorant-Italic', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+}

@@ -4,11 +4,17 @@
 
 body{
   margin: 0px;
-  background-color: rgb(24, 24, 24);
+  background-color: rgb(255, 255, 255);
 }
 @font-face {
   font-family: 'Caveat';
   src: url('/public/fonts/Caveat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant-regular';
+  src: url('/public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

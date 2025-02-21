@@ -1,3 +1,36 @@
+/* Font Face Definitions */
+@font-face {
+  font-family: 'Cormorant-Regular';
+  src: url('../../../public/fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant-Italic';
+  src: url('../../../public/fonts/CormorantGaramond-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cormorant-Medium';
+  src: url('../../../public/fonts/CormorantGaramond-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant-SemiBoldItalic';
+  src: url('../../../public/fonts/CormorantGaramond-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cormorant-MediumItalic';
+  src: url('../../../public/fonts/CormorantGaramond-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Navbar Styles */
 .navbar {
   padding: 18px 0;
   position: fixed;
@@ -6,14 +39,15 @@
   z-index: 9999;
   transition: 0.32s ease-in-out;
   border-bottom: 2px solid transparent;
-  background-color: rgb(24, 24, 24);
+  background-color: #fff;
+  font-family: 'Cormorant-MediumItalic';
 }
 
 .scrolled {
   padding: 16px 0;
   backdrop-filter: blur(20px);
-  border-bottom: 2px solid #4c4646;
-  background-color: rgba(24, 24, 24, 0.8);
+  box-shadow: 0 2px 18px 0 rgba(129, 162, 182, 0.2);
+  background-color: #fff;
 }
 
 .container {
@@ -43,8 +77,9 @@
 }
 
 .navLink {
+  font-family: 'Cormorant-Italic';
   font-weight: 400;
-  color: #fff;
+  color: #000;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -60,20 +95,19 @@
 
 .button {
   background-color: rgb(88, 44, 4);
-  color: rgb(255, 255, 255);
+  color: #fff;
   border-radius: 8px;
-  font-family: "Criteriacf", sans-serif;
-  white-space: nowrap;
+  font-family: 'Cormorant-SemiBoldItalic';
   padding: 16px 32px;
   font-size: 0.875rem;
   line-height: 1.5;
   text-decoration: none;
-  transition: all .15s ease-out;
+  transition: all 0.15s ease-out;
   margin-left: 25px;
 }
 
 .button:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   color: #f90;
 }
 
@@ -113,13 +147,13 @@
   }
 
   .mobileNavLink {
+    font-family: 'Cormorant-Regular';
     font-size: 24px;
     color: #fff;
     padding: 20px 0;
     text-decoration: none;
     opacity: 0.75;
     transition: opacity 0.3s ease;
-    width: 100%;
     text-align: center;
   }
 
@@ -129,7 +163,6 @@
 
   .mobileButton {
     margin-top: 30px;
-    margin-left: 0;
     font-size: 1rem;
     padding: 18px 36px;
   }
@@ -160,3 +193,45 @@
   }
 }
 
+/* Footer Update */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+  background-color: #fff;
+  color: #181818;
+  padding: 2rem 0;
+  margin-top: 30vh;
+  border-top: 2px groove #fff;
+  font-family: 'Cormorant-Regular';
+}
+
+.footerColumn {
+  font-family: 'Cormorant-Medium';
+}
+
+.linkList {
+  font-family: 'Cormorant-Italic';
+  color: #b0b0b0;
+}
+
+.link:hover {
+  color: #181818;
+}
+
+.contactValue {
+  font-family: 'Cormorant-SemiBoldItalic';
+  color: #4da6ff;
+}
+
+.socialLink:hover {
+  opacity: 0.8;
+}
+
+.copyright {
+  text-align: center;
+  font-family: 'Cormorant-Italic';
+  font-size: 0.875rem;
+  color: #b0b0b0;
+}
