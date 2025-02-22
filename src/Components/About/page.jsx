@@ -46,11 +46,11 @@ export default function About() {
       animate={controls}
     >
       <motion.h1 className={styles.title} variants={itemVariants}>
-        About Wallpaper wala
+        About Wallpaper wale
       </motion.h1>
 
       <motion.p className={styles.introduction} variants={itemVariants}>
-        Wallpaper wala is a visionary interior designer known for her unique approach to design. With a keen eye for
+        Wallpaper wale is a visionary interior designer known for her unique approach to design. With a keen eye for
         detail and a passion for creating spaces that reflect individuality, Wallpaper wala brings a fresh perspective
         to every project.
       </motion.p>
@@ -64,7 +64,7 @@ export default function About() {
 
       <motion.div className={styles.missionWrapper} variants={itemVariants}>
         <p className={styles.mission}>
-          At Wallpaper wala, we believe that design is more than just aesthetics; it's about enhancing the way people
+          At Wallpaper wale, we believe that design is more than just aesthetics; it's about enhancing the way people
           live and interact with their surroundings. Our mission is to craft environments that inspire and elevate the
           human experience.
         </p>
