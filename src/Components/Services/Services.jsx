@@ -1,6 +1,6 @@
 import styles from "./services.module.scss"
 
-export default function ServicesSection() {
+export default function Services() {
   return (
     <section className={styles.container}>
       <h1 className={styles.title}>Services</h1>
