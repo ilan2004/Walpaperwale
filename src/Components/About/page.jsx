@@ -46,13 +46,11 @@ export default function About() {
       animate={controls}
     >
       <motion.h1 className={styles.title} variants={itemVariants}>
-        About Wallpaper wale
+        About WallpaperWale
       </motion.h1>
 
       <motion.p className={styles.introduction} variants={itemVariants}>
-        Wallpaper wale is a visionary interior designer known for her unique approach to design. With a keen eye for
-        detail and a passion for creating spaces that reflect individuality, Wallpaper wala brings a fresh perspective
-        to every project.
+        WallpaperWale is dedicated to transforming spaces with creative and functional design solutions. We offer a wide range of services, from premium wallpapers and customized designs to modern blinds, artificial grass installations, and vertical gardens. Our passion lies in enhancing every environment with personalized touches that reflect your unique style.
       </motion.p>
 
       <motion.div
@@ -64,9 +62,7 @@ export default function About() {
 
       <motion.div className={styles.missionWrapper} variants={itemVariants}>
         <p className={styles.mission}>
-          At Wallpaper wale, we believe that design is more than just aesthetics; it's about enhancing the way people
-          live and interact with their surroundings. Our mission is to craft environments that inspire and elevate the
-          human experience.
+          At WallpaperWale, we believe design should inspire and elevate every space. Our mission is to provide innovative interior solutions—whether it's through decorative glass films, lush artificial grass, or personalized wallpapers—that transform homes and offices into vibrant, welcoming environments.
         </p>
       </motion.div>
 
@@ -78,4 +74,3 @@ export default function About() {
     </motion.section>
   )
 }
-
