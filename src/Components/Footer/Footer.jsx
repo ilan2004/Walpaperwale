@@ -1,45 +1,43 @@
-// import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import styles from './footer.module.scss';
+import Link from "next/link"
+import { Facebook, Instagram, Linkedin } from "lucide-react"
+import styles from "./footer.module.scss"
 
 const Footer = () => {
-    const FOOTER_LINKS = [
-        {
-          title: 'Learn More',
-          links: [
-            'About Wallpaper wale',
-            'Jobs',
-            'Privacy Policy',
-            'Contact Us',
-          ],
-        },
-      ];
-      
-    const FOOTER_CONTACT_INFO = {
-        title: 'Contact Us',
-        links: [
-          { label: 'Phone number', value: '91 8123688974', towards: 'tel:+918123688974' },
-          { label: 'Email', value: 'Ravi001@acharya', towards: 'mailto:Ravi001@acharya' },
-          { label: 'Address', value: 'shop no 12, Gorivegere gate, Vibez gully, Sannatammanahalli, Bengaluru, Karnataka 560067', towards: 'https://maps.app.goo.gl/S5ChtreR5emgkBSZA?g_st=com.google.maps.preview.copy' },
-        ],
-      };
-      
-    const SOCIALS = {
-        title: 'Social',
-        links: [
-          '/facebook.svg',
-          '/instagram.svg',
-          '/twitter.svg',
-        ],
-      };
-      
+  const FOOTER_LINKS = [
+    {
+      title: "Learn More",
+      links: ["About Wallpaper wale", "Jobs", "Privacy Policy", "Contact Us"],
+    },
+  ]
+
+  const FOOTER_CONTACT_INFO = {
+    title: "Contact Us",
+    links: [
+      { label: "Phone number", value: "91 8123688974", towards: "tel:+918123688974" },
+      { label: "Email", value: "Ravi001@acharya", towards: "mailto:Ravi001@acharya" },
+      {
+        label: "Address",
+        value: "shop no 12, Gorivegere gate, Vibez gully, Sannatammanahalli, Bengaluru, Karnataka 560067",
+        towards: "https://maps.app.goo.gl/S5ChtreR5emgkBSZA?g_st=com.google.maps.preview.copy",
+      },
+    ],
+  }
+
+  const SOCIALS = {
+    title: "Social",
+    links: [
+      { icon: Facebook, href: "https://facebook.com" },
+      { icon: Instagram, href: "https://www.instagram.com/wallpaperwale_kadugodi/" },
+      { icon: Linkedin, href: "https://linkedin.com" },
+    ],
+  }
+
   return (
-    <footer id='contact' className={styles.footer}>
+    <footer id="contact" className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.topSection}>
           <Link href="/" className={styles.logo}>
-            {/* <Image src="logo.png" alt="logo" width={74} height={29}/> */}
+            Wallpaperwala
           </Link>
 
           <div className={styles.linksContainer}>
@@ -69,10 +67,12 @@ const Footer = () => {
             <div className={styles.socialsSection}>
               <FooterColumn title={SOCIALS.title}>
                 <ul className={styles.socialIcons}>
-                  {SOCIALS.links.map((link) => (
-                    <Link href="/" key={link} className={styles.socialLink}>
-                      {/* <Image src={link} alt="logo" width={24} height={24} /> */}
-                    </Link>
+                  {SOCIALS.links.map(({ icon: Icon, href }) => (
+                    <li key={href}>
+                      <Link href={href} className={styles.socialLink}>
+                        <Icon size={24} />
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               </FooterColumn>
@@ -89,11 +89,12 @@ const Footer = () => {
 
 const FooterColumn = ({ title, children }) => {
   return (
-    <div className={styles.footerColumn}> 
+    <div className={styles.footerColumn}>
       <h4 className={styles.columnTitle}>{title}</h4>
       {children}
     </div>
   )
 }
 
-export default Footer;
+export default Footer
+
