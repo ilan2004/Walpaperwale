@@ -6,6 +6,7 @@ import Picture4 from '../../../public/images/4.jpg'
 import Picture5 from '../../../public/images/5.jpg'
 import Picture6 from '../../../public/images/6.jpg'
 import Picture7 from '../../../public/images/7.jpg'
+import image1 from '../../../public/images/castle.jpg';
 import Image from 'next/image';
 import { useScroll, useTransform, motion} from 'framer-motion';
 import { useRef } from 'react';
@@ -26,7 +27,7 @@ export default function Zoomparallax() {
 
     const pictures = [
         {
-            src: Picture1,
+            src: image1,
             scale: scale4
         },
         {
