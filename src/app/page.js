@@ -1,6 +1,6 @@
 'use client'
 import Zoomparallax from "@/Components/Zoomparallax";
-import { useEffect } from 'react';
+import {useState, useEffect } from 'react';
 import Lenis from '@studio-freight/lenis'
 import styles from './page.module.scss'
 import Navsite from "@/Components/Navbar/Page";
@@ -9,6 +9,8 @@ import About from "@/Components/About/page";
 import Footer from "@/Components/Footer/Footer";
 import Services from "@/Components/Services/Services";
 import { ServerIcon } from "lucide-react";
+// import Projects from "@/Components/MouseServices/Projects";
+// import Scene from "@/Components/MouseServices/Scene";
 
 export default function Home() {
   useEffect( () => {
@@ -21,6 +23,18 @@ export default function Home() {
 
     requestAnimationFrame(raf)
 },[])
+const [activeMenu, setActiveMenu] = useState(null)
+  useEffect( () => {
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  }, [])
+
   return (
 
     <div className={styles.main}>
@@ -28,7 +42,8 @@ export default function Home() {
       <Hero/>
       <Zoomparallax/>
       <About/>
-      <Services/>
+      {/* <Projects setActiveMenu={setActiveMenu}/>
+      <Scene activeMenu={activeMenu}/> */}
       <Footer/>
     </div>
   );
