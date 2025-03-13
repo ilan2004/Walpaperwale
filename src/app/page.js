@@ -9,6 +9,7 @@ import About from "@/Components/About/page";
 import Footer from "@/Components/Footer/Footer";
 import Services from "@/Components/Services/Services";
 import { ServerIcon } from "lucide-react";
+import Cases from "@/Components/Cases/Services";
 // import Projects from "@/Components/MouseServices/Projects";
 // import Scene from "@/Components/MouseServices/Scene";
 
@@ -42,8 +43,8 @@ const [activeMenu, setActiveMenu] = useState(null)
       <Hero/>
       <Zoomparallax/>
       <About/>
-      {/* <Projects setActiveMenu={setActiveMenu}/>
-      <Scene activeMenu={activeMenu}/> */}
+      <Services/>
+      <Cases/>
       <Footer/>
     </div>
   );

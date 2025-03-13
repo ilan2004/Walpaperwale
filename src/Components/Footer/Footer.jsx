@@ -37,7 +37,7 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.topSection}>
           <Link href="/" className={styles.logo}>
-            Wallpaperwala
+            Wallpaperwale
           </Link>
 
           <div className={styles.linksContainer}>
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.divider} />
-        <p className={styles.copyright}>2025 Wallpaperwala | All rights reserved</p>
+        <p className={styles.copyright}>2025 Wallpaperwale | All rights reserved</p>
       </div>
     </footer>
   )
