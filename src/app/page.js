@@ -43,7 +43,6 @@ const [activeMenu, setActiveMenu] = useState(null)
       <Hero/>
       <Zoomparallax/>
       <About/>
-      <Services/>
       <Cases/>
       <Footer/>
     </div>

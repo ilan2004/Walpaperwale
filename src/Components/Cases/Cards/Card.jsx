@@ -20,7 +20,7 @@ const Card = ({ i, title, font, description, src, url, detail, color, progress, 
       <div className="cardContainer-inside">
         <motion.div
           style={{
-            background: `linear-gradient(to bottom, ${color}, #fff)`,
+            background: ` ${color}`,
             color: font,
             scale, 
             top: `calc(-5vh + ${i * 25}px)`
