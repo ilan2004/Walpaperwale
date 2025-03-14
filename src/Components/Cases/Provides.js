@@ -21,7 +21,7 @@ const all_items = [
     title: "Blinds",
     description: "Modern blinds for precise light control, privacy, and enhanced décor.",
     detail: "Choose from venetian, roller, roman, and vertical styles in various materials including wood, aluminum, and fabric.",
-    src: "/images/slip3.webp",
+    src: "/images/blind.webp",
     url: "/services/blinds",
     color: "#FFF8E1", // Soft warm white
     font: "#3E2723"
@@ -30,7 +30,7 @@ const all_items = [
     title: "Artificial Grass",
     description: "Lush, maintenance-free greenery that stays perfect year-round for any space.",
     detail: "UV-resistant, durable synthetic turf that looks and feels natural with none of the watering, mowing, or fertilizing.",
-    src: "/images/slip4.webp",
+    src: "/images/grass.jpg",
     url: "/services/artificial-grass",
     color: "#F1F8E9", // Very light green tint
     font: "#3E2723"
@@ -39,7 +39,7 @@ const all_items = [
     title: "Vertical Garden",
     description: "Bring nature indoors with space-saving living walls and greenery installations.",
     detail: "Create stunning biophilic designs that improve air quality, reduce noise, and enhance well-being in any environment.",
-    src: "/images/slip1.webp",
+    src: "/images/garde.webp",
     url: "/services/vertical-garden",
     color: "#E8F5E9", // Subtle greenish white
     font: "#3E2723"
@@ -48,7 +48,7 @@ const all_items = [
     title: "Window Glass Film",
     description: "Decorative and protective film solutions for privacy, UV protection, and style.",
     detail: "From frosted and patterned to mirrored and solar control films that enhance security while reducing energy costs.",
-    src: "/images/slip2.webp",
+    src: "/images/glass.webp",
     url: "/services/window-film",
     color: "#ECEFF1", // Light grayish blue
     font: "#3E2723"
@@ -57,7 +57,7 @@ const all_items = [
     title: "Professional Installation",
     description: "Skilled craftspeople ensuring flawless execution of all our products and services.",
     detail: "Our experienced team handles everything from measurement to final installation with attention to detail and quality craftsmanship.",
-    src: "/images/slip4.webp",
+    src: "/images/workers.webp",
     url: "/services/installation",
     color: "#FBE9E7", // Soft peach tint
     font: "#3E2723"
