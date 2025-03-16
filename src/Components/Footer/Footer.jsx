@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className={styles.divider} />
-        <p className={styles.copyright}>2025 Wallpaperwale | All rights reserved</p>
+        <p className={styles.copyright}>2025 Wallpaperwale by Ctrlweb | All rights reserved</p>
       </div>
     </footer>
   )
