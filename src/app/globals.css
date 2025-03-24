@@ -5,6 +5,7 @@
 body{
   margin: 0px;
   background-color: rgb(255, 255, 255);
+  font-family: var(--font-cormorant-garamond), serif;
 }
 @font-face {
   font-family: 'Caveat';
