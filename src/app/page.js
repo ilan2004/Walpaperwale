@@ -10,6 +10,7 @@ import Footer from "@/Components/Footer/Footer";
 import Services from "@/Components/Services/Services";
 import { ServerIcon } from "lucide-react";
 import Cases from "@/Components/Cases/Services";
+import Contact from "@/Components/Contact/Contact";
 // import Projects from "@/Components/MouseServices/Projects";
 // import Scene from "@/Components/MouseServices/Scene";
 
@@ -39,11 +40,13 @@ const [activeMenu, setActiveMenu] = useState(null)
   return (
 
     <div className={styles.main}>
+      
       <Navsite/>
       <Hero/>
       <Zoomparallax/>
       <About/>
       <Cases/>
+      <Contact/>
       <Footer/>
     </div>
   );
