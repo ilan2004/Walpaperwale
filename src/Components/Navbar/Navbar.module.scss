@@ -7,35 +7,26 @@ $color-background: #fff;
 $color-link: #4da6ff;
 $transition-speed: 0.3s;
 
-// Since fonts are now imported via layout.js, we define the font family variable to use the CSS variable.
 $font-cormorant: var(--font-cormorant-garamond), serif;
 
-// Utility Mixins
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-// Navbar Styles
 .navbar {
   padding: 18px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 9999;
-  transition: $transition-speed ease-in-out;
-  border-bottom: 2px solid transparent;
   background-color: $color-background;
   font-family: $font-cormorant;
   font-weight: 500;
   font-style: italic;
-
-  &.scrolled {
-    padding: 16px 0;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 2px 18px 0 rgba(129, 162, 182, 0.2);
-  }
+  box-shadow: 0 2px 18px 0 rgba(129, 162, 182, 0.2); // Static shadow
+  border-bottom: 2px solid rgba(88, 44, 4, 0.1); // Static subtle border
 
   .container {
     @include flex-center;
@@ -48,7 +39,6 @@ $font-cormorant: var(--font-cormorant-garamond), serif;
 
   .logo {
     height: auto;
-    transition: width $transition-speed ease;
   }
 
   .navbarCollapse {
@@ -131,57 +121,6 @@ $font-cormorant: var(--font-cormorant-garamond), serif;
   }
 }
 
-// Footer Styles
-.footer {
-  @include flex-center;
-  margin-bottom: 6rem;
-  background-color: $color-background;
-  color: $color-text;
-  padding: 2rem 0;
-  margin-top: 30vh;
-  border-top: 2px groove $color-background;
-  font-family: $font-cormorant;
-  font-weight: 400;
-
-  .footerColumn {
-    font-weight: 500;
-  }
-
-  .linkList {
-    font-style: italic;
-    color: $color-text-light;
-  }
-
-  .link {
-    transition: color $transition-speed ease;
-
-    &:hover {
-      color: $color-text;
-    }
-  }
-
-  .contactValue {
-    font-weight: 600;
-    font-style: italic;
-    color: $color-link;
-  }
-
-  .socialLink {
-    transition: opacity $transition-speed ease;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  .copyright {
-    text-align: center;
-    font-style: italic;
-    font-size: 0.875rem;
-    color: $color-text-light;
-  }
-}
-
 // Media Queries
 @media screen and (max-width: 991px) {
   .navbar {
@@ -198,7 +137,7 @@ $font-cormorant: var(--font-cormorant-garamond), serif;
       flex-direction: column;
       align-items: center;
       position: fixed;
-      top: 70px;
+      top: 50px;
       left: 0;
       right: 0;
       bottom: 0;
@@ -233,10 +172,6 @@ $font-cormorant: var(--font-cormorant-garamond), serif;
 @media screen and (max-width: 480px) {
   .navbar {
     padding: 12px 0;
-
-    &.scrolled {
-      padding: 10px 0;
-    }
 
     .logo {
       width: 60px;

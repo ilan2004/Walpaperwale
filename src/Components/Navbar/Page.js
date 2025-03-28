@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
@@ -15,23 +15,13 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
+    <nav className={styles.navbar}>
       <div className={styles.container}>
         <Link href="/">
           <Image src="/logo.png" alt="logo" width={74} height={29} className={styles.logo} />
@@ -103,4 +93,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
