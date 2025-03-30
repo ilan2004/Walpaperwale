@@ -81,7 +81,19 @@ const Footer = () => {
         </div>
 
         <div className={styles.divider} />
-        <p className={styles.copyright}>2025 Wallpaperwale by <Link className={styles.logos} href='/https://www.ctrlweb.site/'> Ctrlweb </Link>| All rights reserved</p>
+        <p className={styles.copyright}>
+  2025 Wallpaperwale by{" "}
+  <Link 
+    className={styles.logos} 
+    href="https://www.ctrlweb.site/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Ctrlweb
+  </Link>{" "}
+  | All rights reserved
+</p>
+
       </div>
     </footer>
   )
