@@ -23,9 +23,10 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        <Link href="/">
-          <Image src="/logo.png" alt="logo" width={74} height={29} className={styles.logo} />
-        </Link>
+      <Link href="/">
+  <img src="/images/logo.svg" alt="logo"  className={styles.logo} />
+</Link>
+
 
         <div className={`${styles.navbarCollapse} ${isOpen ? styles.show : ""}`}>
           <ul className={styles.navLinks}>

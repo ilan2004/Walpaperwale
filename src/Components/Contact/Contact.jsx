@@ -17,7 +17,7 @@ export default function Contact() {
     const message = e.target.message.value
 
     // Replace with your WhatsApp number (in international format, e.g., +1234567890, without spaces or special characters)
-    const whatsappNumber = "917034926395" // Update this with your actual number
+    const whatsappNumber = "+918123688974" // Update this with your actual number
     
     // Construct the WhatsApp message
     const whatsappMessage = `📩 *New Contact Form Submission* 📩\n\n` +
@@ -75,7 +75,7 @@ export default function Contact() {
 
               <div className="space-y-2">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Email Address
+                  Email Address(optional) 
                 </label>
                 <input
                   id="email"
@@ -89,7 +89,7 @@ export default function Contact() {
 
               <div className="space-y-2">
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Phone Number (optional)
+                  Phone Number 
                 </label>
                 <input
                   id="phone"

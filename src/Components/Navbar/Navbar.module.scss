@@ -32,7 +32,7 @@ $font-cormorant: var(--font-cormorant-garamond), serif;
     @include flex-center;
     justify-content: space-between;
     width: 100%;
-    padding: 0 5%;
+    padding: 0;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -168,13 +168,17 @@ $font-cormorant: var(--font-cormorant-garamond), serif;
     }
   }
 }
-
+.logo {
+  width:15%;
+  height: 10%;
+}
 @media screen and (max-width: 480px) {
   .navbar {
     padding: 12px 0;
 
     .logo {
       width: 60px;
+      height: 60px;
     }
 
     .mobileNavLink {
