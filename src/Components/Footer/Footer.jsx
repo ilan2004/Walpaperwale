@@ -36,9 +36,9 @@ const Footer = () => {
     <footer id="contact" className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.topSection}>
-          <Link href="/" className={styles.logo}>
-            Wallpaperwale
-          </Link>
+        <Link href="/">
+  <img src="/images/logo.png" alt="logo"  className={styles.logo} />
+</Link>
 
           <div className={styles.linksContainer}>
             {FOOTER_LINKS.map((columns) => (

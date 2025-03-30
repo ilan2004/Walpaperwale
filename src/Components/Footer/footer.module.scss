@@ -31,8 +31,8 @@
   align-items: start;
   justify-content: center;
   gap: 10%;
-  font-family: var(--font-cormorant-garamond), serif;
-  font-weight: 500; /* Medium */
+  height: 20%;
+  width: 20%;
 
   @media (min-width: 768px) {
     flex-direction: row;

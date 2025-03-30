@@ -148,7 +148,7 @@ $font-cormorant: var(--font-cormorant-garamond), serif;
 
     .mobileNavLink {
       font-weight: 400;
-      font-size: 24px;
+      font-size: 50px;
       color: $color-background;
       padding: 20px 0;
       text-decoration: none;
@@ -177,18 +177,19 @@ $font-cormorant: var(--font-cormorant-garamond), serif;
     padding: 12px 0;
 
     .logo {
-      width: 60px;
-      height: 60px;
+      width: 20%;
+      height: 20%;
     }
 
     .mobileNavLink {
-      font-size: 20px;
+      font-size: 50px;
       padding: 15px 0;
     }
 
     .mobileButton {
-      font-size: 0.875rem;
+      font-size: 1.8rem;
       padding: 16px 32px;
     }
+    
   }
 }
