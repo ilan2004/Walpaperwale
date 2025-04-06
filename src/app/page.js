@@ -11,6 +11,7 @@ import Services from "@/Components/Services/Services";
 import { ServerIcon } from "lucide-react";
 import Cases from "@/Components/Cases/Services";
 import Contact from "@/Components/Contact/Contact";
+import StickyButtons from "@/Components/Sticky/Sticky";
 // import Projects from "@/Components/MouseServices/Projects";
 // import Scene from "@/Components/MouseServices/Scene";
 
@@ -48,6 +49,7 @@ const [activeMenu, setActiveMenu] = useState(null)
       <Cases/>
       <Contact/>
       <Footer/>
+      <StickyButtons/>
     </div>
   );
 }

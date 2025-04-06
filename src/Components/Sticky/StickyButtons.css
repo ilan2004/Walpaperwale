@@ -1,0 +1,72 @@
+.sticky-buttons-container {
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    z-index: 1000;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .sticky-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+    outline: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    pointer-events: auto;
+  }
+  
+  .sticky-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+  }
+  
+  .sticky-button:active {
+    transform: scale(0.95);
+  }
+  
+  .call-button {
+    background-color: #1976D2; /* Blue color for call button */
+    color: white;
+  }
+  
+  .whatsapp-button {
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    margin-left: auto; /* Pushes this button to the right */
+  }
+  
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .sticky-button {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .sticky-buttons-container {
+      bottom: 20px;
+      padding: 0 10px;
+    }
+  }
+  
+  /* For even smaller screens */
+  @media (max-width: 480px) {
+    .sticky-button {
+      width: 45px;
+      height: 45px;
+    }
+    
+    .sticky-button svg {
+      width: 20px;
+      height: 20px;
+    }
+  }

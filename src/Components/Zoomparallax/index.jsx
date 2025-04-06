@@ -12,19 +12,19 @@ import { useScroll, useTransform, motion} from 'framer-motion';
 import { useRef } from 'react';
 
 export default function Zoomparallax() {
-    
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ['start start', 'end end']
+        offset: ['start start', 'end start'] // Further modified offset for 150vh container
     })
-
-    const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
-    const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
-    const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
-    const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
-    const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
-
+    
+    // Further increased scale speed for 150vh container
+    const scale4 = useTransform(scrollYProgress, [0, 0.5], [1, 4]);
+    const scale5 = useTransform(scrollYProgress, [0, 0.5], [1, 5]);
+    const scale6 = useTransform(scrollYProgress, [0, 0.5], [1, 6]);
+    const scale8 = useTransform(scrollYProgress, [0, 0.5], [1, 8]);
+    const scale9 = useTransform(scrollYProgress, [0, 0.5], [1, 9]);
+    
     const pictures = [
         {
             src: image1,
@@ -55,7 +55,7 @@ export default function Zoomparallax() {
             scale: scale9
         }
     ]
-
+    
     return (
         <main className={styles.main}>
         <div ref={container} className={styles.container}>
