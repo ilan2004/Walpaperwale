@@ -5,12 +5,12 @@ const StickyButtons = () => {
   const handleCall = () => {
     window.location.href = 'tel:+918123688974'; // Replace with your phone number
   };
-
+  
   const handleWhatsApp = () => {
     // Replace with your WhatsApp number and optional pre-filled message
     window.open('https://wa.me/8123688974?text=Hello,%20I%20have%20a%20question', '_blank');
   };
-
+  
   return (
     <div className="sticky-buttons-container">
       <button 
@@ -19,7 +19,7 @@ const StickyButtons = () => {
         aria-label="Call us"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-          <path d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-.76-.75-1.32-1.52-1.32H6c-.85 0-1.55.63-1.65 1.47C4.13 9.87 7.4 16.2 12.7 21.5c5.3 5.3 11.64 8.57 17.06 8.36.84-.1 1.47-.8 1.47-1.65v-2.24c-.01-.76-.56-1.39-1.32-1.52l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-.76-.75-1.32-1.52-1.32H6c-.85 0-1.55.63-1.65 1.47" />
+          <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" />
         </svg>
       </button>
       <button 
