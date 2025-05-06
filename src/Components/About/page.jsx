@@ -66,11 +66,6 @@ export default function About() {
         </p>
       </motion.div>
 
-      {/* <motion.div className={styles.buttonWrapper} variants={itemVariants}>
-        <motion.button className={styles.button} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          Explore More
-        </motion.button>
-      </motion.div> */}
     </motion.section>
   )
 }

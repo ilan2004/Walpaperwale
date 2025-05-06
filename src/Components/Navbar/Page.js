@@ -1,96 +1,57 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X } from "lucide-react"
-import styles from "./Navbar.module.scss"
+import React from "react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
+import styles from './Navbar.module.scss';
 
-const NAV_LINKS = [
-  { href: "/", key: "home", label: "Home" },
-  { href: "/Portfolio", key: "Portfolio", label: "Portfolio" },
-  { href: "#services", key: "services", label: "Services" },
-]
-
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+export default function NavbarV() {
+  // Color palette based on #40422f
+  const colors = {
+    primary: '#40422f',    // Dark olive green for brand text
+    secondary: '#5a5c46',  // Lighter variant for hover states
+    light: '#6c6e58',      // Even lighter for subtle elements
+  };
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.container}>
-      <Link href="/">
-  <img src="/images/logo.png" alt="logo"  className={styles.logo} />
-</Link>
-
-
-        <div className={`${styles.navbarCollapse} ${isOpen ? styles.show : ""}`}>
-          <ul className={styles.navLinks}>
-            {NAV_LINKS.map((link) => (
-              <li key={link.key}>
-                <Link href={link.href} className={styles.navLink}>
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <a href="#contact" className={styles.button}>
-            Contact Us
-          </a>
-        </div>
-
-        <button
-          className={`${styles.navbarToggler} ${isOpen ? styles.active : ""}`}
-          onClick={toggleMenu}
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className={styles.mobileMenu}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+    <Navbar className="bg-white shadow-sm">
+      <NavbarBrand>
+        <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src="/images/logo.png" alt="Wallpaperwale" className={styles.logo} />
+          <p className="font-bold" style={{ color: colors.primary }}>Wallpaperwale</p>
+        </Link>
+      </NavbarBrand>
+      
+      <NavbarContent className="hidden sm:flex gap-6" justify="center">
+        <NavbarItem>
+          <Link href="/" style={{ color: colors.primary }} className={`hover:text-[${colors.secondary}] transition-colors`}>
+            Home
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/services" style={{ color: colors.primary }} className={`hover:text-[${colors.secondary}] transition-colors`}>
+            Services
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/portfolio" style={{ color: colors.primary }} className={`hover:text-[${colors.secondary}] transition-colors`}>
+            Portfolio
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <Button
+            as={Link}
+            href="/contact"
+            variant="flat"
+            style={{ backgroundColor: colors.primary }}
+            className="text-white hover:opacity-90 transition-opacity"
           >
-            {NAV_LINKS.map((link) => (
-              <motion.div
-                key={link.key}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3, delay: NAV_LINKS.indexOf(link) * 0.1 }}
-              >
-                <Link href={link.href} className={styles.mobileNavLink} onClick={toggleMenu}>
-                  {link.label}
-                </Link>
-              </motion.div>
-            ))}
-            <motion.a
-              href="#contact"
-              className={`${styles.button} ${styles.mobileButton}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.3, delay: NAV_LINKS.length * 0.1 }}
-              onClick={toggleMenu}
-            >
-              Contact Us
-            </motion.a>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  )
+            Contact Us
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+    </Navbar>
+  );
 }
-
-export default Navbar

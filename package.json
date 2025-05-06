@@ -23,7 +23,7 @@
     "buffer": "^6.0.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.4.3",
+    "framer-motion": "^12.9.4",
     "framer-motion-3d": "^12.4.7",
     "gsap": "^3.12.7",
     "lenis": "^1.1.21",
@@ -37,6 +37,7 @@
     "react-use": "^17.6.0",
     "rippleui": "^1.12.1",
     "sass": "^1.85.0",
+    "split-type": "^0.3.4",
     "tailwind-merge": "^3.0.1",
     "three": "^0.174.0"
   },

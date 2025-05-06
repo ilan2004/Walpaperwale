@@ -5,9 +5,9 @@
 body{
   margin: 0px;
   background-color: rgb(255, 255, 255);
-  font-family: var(--font-cormorant-garamond), serif;
+
 }
-@font-face {
+/* @font-face {
   font-family: 'Caveat';
   src: url('/public/fonts/Caveat-Regular.ttf') format('truetype');
   font-weight: normal;
@@ -19,3 +19,22 @@ body{
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "db";
+  src: url(/public/fonts/druk-bold.otf);
+}
+
+@font-face {
+  font-family: "dh";
+  src: url(/fonts/druk-heavy.otf);
+}
+
+@font-face {
+  font-family: "dm";
+  src: url(/fonts/druk-medium.otf);
+}
+
+@font-face {
+  font-family: "ds";
+  src: url(/fonts/druk-super.otf);
+} */

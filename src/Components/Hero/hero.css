@@ -1,0 +1,131 @@
+/* Define CSS custom properties for reusability */
+:root {
+  --copy: #40422f;
+  --background-color: #40422f;
+}
+
+/* Ensure full viewport height and fix background image */
+.page {
+
+  background-size: cover;
+  background-position: center;
+  color: var(--copy);
+  min-height: 100vh; /* Full viewport height */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page .container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Optional: limit container width */
+  margin: 0 auto; /* Center container */
+  flex: 1; /* Allow container to grow */
+}
+
+.project-hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin: 0 2rem;
+  padding: 3.75rem 3rem 10rem;
+  background-image: url("/images/wall2.png");
+  min-height: 80vh; /* Ensure hero takes significant height */
+}
+
+.project-hero .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-page-title h1 {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.project-hero .row {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+}
+
+.project-hero .sub-col {
+  flex: 1;
+  min-width: 200px; /* Prevent sub-col from collapsing too small */
+}
+
+a,
+p {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--copy);
+  will-change: transform;
+}
+
+.page h1 {
+  text-transform: uppercase;
+  font-family: "dh", sans-serif;
+  font-weight: lighter;
+  font-size: 7.5vw;
+  line-height: 0.85;
+  color: var(--copy);
+  will-change: transform;
+}
+
+.page h2 {
+  text-transform: uppercase;
+  font-family: "dh", sans-serif;
+  font-weight: lighter;
+  font-size: 4vw;
+  line-height: 0.85;
+  color: var(--copy);
+  will-change: transform;
+}
+
+.page h3 {
+  text-transform: uppercase;
+  font-family: "dm", sans-serif;
+  font-weight: lighter;
+  font-size: 2.25vw;
+  line-height: 0.85;
+  color: var(--copy);
+  will-change: transform;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .page {
+    min-height: 100vh; /* Maintain full height on mobile */
+  }
+
+  .project-hero {
+    margin: 0 1rem;
+    padding: 2rem;
+  }
+
+  .project-hero .row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .page h1 {
+    font-size: 12vw;
+  }
+
+  .page h2 {
+    font-size: 10vw;
+  }
+
+  .page h3 {
+    font-size: 8vw;
+  }
+}

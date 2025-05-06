@@ -1,6 +1,12 @@
 .main{
   position: relative;
-  background-color:#3E2723 ;
+  border-radius: 12px;
+  flex-flow: column;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 3.75rem 3rem 10rem;
+  display: flex;
+  background-color: #40422f;
 }
 .topic{
   text-align: center;

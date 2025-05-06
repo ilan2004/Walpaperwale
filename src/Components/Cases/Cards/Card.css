@@ -26,16 +26,17 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   overflow: hidden;
-  font-family: var(--font-cormorant-garamond), serif;
   transform-origin: top;
 }
 
 .card-title {
-  font-family: var(--font-cormorant-garamond), serif;
+  text-transform: uppercase;
+  font-family: "dm";
+  font-weight: lighter;
   font-size: 2.5rem;
-  font-weight: 600;
+
   margin-bottom: 1.25rem;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.1em;
   line-height: 1.2;
 }
 
@@ -60,15 +61,15 @@
 }
 
 .desp {
-  font-family: var(--font-cormorant-garamond), serif;
+
   font-size: 1.25rem;
-  line-height: 1.6;
+  line-height: 1.2;
   margin: 0;
   font-weight: 400;
 }
 
 .detail-text {
-  font-family: var(--font-cormorant-garamond), serif;
+
   font-size: 1rem;
   line-height: 1.5;
   opacity: 0.8;

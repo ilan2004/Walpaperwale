@@ -11,6 +11,13 @@
   border-top: #fff;
   border-style: groove;
   font-family: var(--font-cormorant-garamond), serif;
+    border-radius: 12px;
+  flex-flow: column;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 3.75rem 3rem 10rem;
+  display: flex;
+  background-image: url("/images/wall.png");
 }
 
 /* ====================== CONTAINER ====================== */
