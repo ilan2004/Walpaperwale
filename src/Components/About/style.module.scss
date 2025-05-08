@@ -1,8 +1,20 @@
 .container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 4rem 1rem;
 
+  padding: 4rem 1rem;
+  margin-bottom: 6rem;
+  display: flex;
+  border-top: #fff;
+  border-style: groove;
+  justify-content: center;
+  align-items: center;
+    border-radius: 12px;
+  flex-flow: column;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 3.75rem 3rem 10rem;
+  font-family: "dh", sans-serif;
+
+  background-image: url("/images/wall8.png");
   @media (min-width: 640px) {
     padding: 4rem 1.5rem;
   }
@@ -13,8 +25,8 @@
 }
 
 .title {
-  font-family: "dh";
-  font-weight: lighter;
+  font-family: "dh", sans-serif;
+
   font-size: 4.5rem;
   margin-bottom: 3rem;
   letter-spacing: 0.08em;
@@ -33,7 +45,7 @@
   max-width: 90%;
   margin: 0 auto 4rem;
   text-align: center;
-
+  text-transform: none;
   @media (max-width: 768px) {
     font-size: 1.25rem;
   }
@@ -73,4 +85,6 @@
     justify-content: center;
   }
 }
+
+
 
