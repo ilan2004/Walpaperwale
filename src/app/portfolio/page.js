@@ -1,8 +1,14 @@
 import React from 'react'
+import CaseStudiesPortfolio from '@/Components/Projects/work/page';
+import Navbarproject from '@/Components/Projects/Navbar/Page';
 
- const page = () => {
+const Portfolio = () => {
   return (
-    <div>page</div>
+    <div>
+        <Navbarproject />
+        <CaseStudiesPortfolio/>
+    </div>
   )
 }
-export default page;
+
+export default Portfolio;
