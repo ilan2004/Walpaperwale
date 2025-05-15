@@ -3,21 +3,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6rem;
+  margin-bottom: clamp(3rem, 6vw, 6rem);
   background-color: rgb(255, 255, 255);
   color: #2d1601;
-  padding: 2rem 0;
-  margin-top: 30vh;
+  padding: clamp(1.5rem, 3vw, 2rem) 0;
+  margin-top: clamp(15vh, 20vh, 30vh);
   border-top: #fff;
   border-style: groove;
   font-family: var(--font-cormorant-garamond), serif;
-    border-radius: 12px;
+  border-radius: clamp(8px, 1.5vw, 12px);
   flex-flow: column;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding: 3.75rem 3rem 10rem;
-  display: flex;
+  margin-left: clamp(0.5rem, 2vw, 2rem);
+  margin-right: clamp(0.5rem, 2vw, 2rem);
+  padding: clamp(2rem, 4vw, 3.75rem) clamp(1rem, 3vw, 3rem) clamp(4rem, 8vw, 10rem);
   background-image: url("/images/wall10.png");
+  background-size: cover;
+  background-position: center;
 }
 
 /* ====================== CONTAINER ====================== */
@@ -26,8 +27,8 @@
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
-  padding: 0 2rem;
+  gap: clamp(2rem, 3vw, 3.5rem);
+  padding: 0 clamp(0.5rem, 1.5vw, 2rem);
   font-family: var(--font-cormorant-garamond), serif;
 }
 
@@ -35,58 +36,59 @@
 .topSection {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
-  gap: 10%;
+  gap: clamp(1.5rem, 3vw, 10%);
+}
 
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .logo {
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
   font-family: var(--font-cormorant-garamond), serif;
   font-weight: 600; /* SemiBold */
   font-style: italic;
   font-size: 2rem;
-  height: 40%;
-  width: 40%;
+  height: auto;
+  width: clamp(120px, 30%, 40%);
 }
 
 /* ====================== LINKS SECTION ====================== */
 .linksContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
-  justify-content: space-between;
+  gap: clamp(1.5rem, 2vw, 2.5rem);
+  justify-content: center;
   flex-grow: 1;
+  width: 100%;
 }
 
 .footerColumn {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  max-width: 100%;
+  gap: clamp(0.75rem, 1vw, 1.25rem);
+  min-width: clamp(150px, 40%, 250px);
   font-family: var(--font-cormorant-garamond), serif;
-
-  @media (min-width: 640px) {
-    max-width: 250px;
-  }
 }
 
 .columnTitle {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
   font-weight: 500;
   font-style: italic;
   font-family: var(--font-cormorant-garamond), serif;
+  text-align: center;
 }
 
 .linkList {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: clamp(0.5rem, 0.75vw, 1rem);
   color: #582c04;
+  align-items: center;
 }
 
 .link {
@@ -95,6 +97,8 @@
   transition: color 0.3s ease-in-out;
   font-family: var(--font-cormorant-garamond), serif;
   font-style: italic;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  text-align: center;
 
   &:hover {
     color: #3e2004;
@@ -105,17 +109,21 @@
 .contactSection {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: clamp(0.75rem, 1vw, 1.25rem);
   font-family: var(--font-cormorant-garamond), serif;
+  width: 100%;
+  max-width: 350px;
 }
 
 .contactLink {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
   max-width: 100%;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
+  justify-content: center;
+  text-align: center;
 
   &:hover {
     color: #582c04;
@@ -126,31 +134,41 @@
   flex-shrink: 0;
   font-family: var(--font-cormorant-garamond), serif;
   font-weight: 500; /* Medium */
+  font-size: clamp(0.875rem, 1vw, 1rem);
 }
 
 .contactValue {
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 1vw, 1rem);
   color: #4da6ff;
   word-break: break-word;
   font-family: var(--font-cormorant-garamond), serif;
   font-style: italic;
+  text-align: center;
 }
 
 /* ====================== SOCIAL SECTION ====================== */
 .socialsSection {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: clamp(0.75rem, 1vw, 1.25rem);
   font-family: var(--font-cormorant-garamond), serif;
+  align-items: center;
 }
 
 .socialIcons {
   display: flex;
-  gap: 1rem;
+  gap: clamp(0.75rem, 1vw, 1rem);
 }
 
 .socialLink {
   transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(32px, 5vw, 40px);
+  height: clamp(32px, 5vw, 40px);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
 
   &:hover {
     opacity: 0.8;
@@ -166,19 +184,84 @@
 
 .copyright {
   text-align: center;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
   color: #41250b;
   font-family: var(--font-cormorant-garamond), serif;
   font-weight: 500; /* Medium */
   font-style: italic;
 }
-@media (max-width: 640px) {
-  .footer{
-    margin-top: 00vh;
+
+.logos {
+  color: blue;
+  font-size: clamp(0.75rem, 1vw, 0.875rem);
+}
+
+/* ====================== RESPONSIVE STYLES ====================== */
+@media (min-width: 768px) {
+  .topSection {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .logoWrapper {
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+  
+  .linksContainer {
+    justify-content: space-between;
+  }
+  
+  .linkList, .columnTitle {
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .contactLink {
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .contactValue {
+    text-align: left;
+  }
+  
+  .socialsSection {
+    align-items: flex-start;
   }
 }
-.logos{
-  color: blue;
-  font-size: 0.875rem;
 
+@media (max-width: 640px) {
+  .footer {
+    margin-top: 10vh;
+    padding-bottom: 6rem;
+  }
+  
+  .footerColumn {
+    min-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contactSection {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .contactLink {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    padding: 1.5rem 0.75rem 4rem;
+  }
+  
+  .container {
+    gap: 1.5rem;
+  }
 }

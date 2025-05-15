@@ -2,10 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  margin: 0px;
-  background-color: rgb(255, 255, 255);
+:root {
+  --heading-font: var(--font-cormorant-garamond);
+  --body-font: var(--font-geist-sans);
+  --accent-font: var(--font-geist-mono);
+  
+  /* Color palette */
+  --primary: #40422f;
+  --primary-light: #5a5c46;
+  --secondary: #582c04;
+  --secondary-light: #7a4d2b;
+  --background: #ffffff;
+  --text: #333333;
+  --accent: #d4a76a;
+}
 
+body {
+  margin: 0;
+  background-color: var(--background);
+  font-family: var(--body-font);
+  color: var(--text);
+}
+
+/* Typography scale */
+@layer base {
+  h1 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  
+  h2 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+  }
+  
+  h3 {
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.3;
+  }
+  
+  p {
+    font-family: var(--body-font);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.6;
+    text-transform: none;
+  }
 }
 /* @font-face {
   font-family: 'Caveat';

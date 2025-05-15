@@ -36,9 +36,11 @@ const Footer = () => {
     <footer id="contact" className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.topSection}>
-        <Link href="/">
-  <img src="/images/logo.png" alt="logo"  className={styles.logo} />
-</Link>
+          <div className={styles.logoWrapper}>
+            <Link className={styles.logo} href="/">
+              <img src="/images/logo.png" alt="logo" className={styles.logo} />
+            </Link>
+          </div>
 
           <div className={styles.linksContainer}>
             {FOOTER_LINKS.map((columns) => (
@@ -70,7 +72,7 @@ const Footer = () => {
                   {SOCIALS.links.map(({ icon: Icon, href }) => (
                     <li key={href}>
                       <Link href={href} className={styles.socialLink}>
-                        <Icon size={24} />
+                        <Icon size={20} />
                       </Link>
                     </li>
                   ))}
@@ -82,18 +84,17 @@ const Footer = () => {
 
         <div className={styles.divider} />
         <p className={styles.copyright}>
-  2025 Wallpaperwale by{" "}
-  <Link 
-    className={styles.logos} 
-    href="https://www.ctrlweb.site/" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    Ctrlweb
-  </Link>{" "}
-  | All rights reserved
-</p>
-
+          2025 Wallpaperwale by{" "}
+          <Link 
+            className={styles.logos} 
+            href="https://www.ctrlweb.site/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Ctrlweb
+          </Link>{" "}
+          | All rights reserved
+        </p>
       </div>
     </footer>
   )

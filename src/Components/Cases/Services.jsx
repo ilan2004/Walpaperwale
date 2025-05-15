@@ -40,7 +40,7 @@ export default function Services() {
 
       <div className={styles.cardsContainer}>
         {all_items.slice(0, 7).map((project, i) => {
-          const targetScale = 1 - ((7 - i) * 0.03); // Optimized scaling
+          const targetScale = 1 - ((7 - i) * 0.01); // Further reduced scale difference
 
           return (
             <Card 
@@ -48,7 +48,7 @@ export default function Services() {
               i={i} 
               {...project} 
               progress={scrollYProgress} 
-              range={[i * 0.2, 1]} 
+              range={[i * 0.05, 1]} // Significantly reduced range for much faster scrolling
               targetScale={targetScale}
             />
           );

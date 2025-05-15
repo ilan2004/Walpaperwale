@@ -1,131 +1,264 @@
-/* Define CSS custom properties for reusability */
-:root {
-  --copy: #40422f;
-  --background-color: #40422f;
-}
-
-/* Ensure full viewport height and fix background image */
-.page {
-
-  background-size: cover;
-  background-position: center;
-  color: var(--copy);
-  min-height: 100vh; /* Full viewport height */
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.page .container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px; /* Optional: limit container width */
-  margin: 0 auto; /* Center container */
-  flex: 1; /* Allow container to grow */
-}
-
-.project-hero {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  margin: 0 2rem;
-  padding: 3.75rem 3rem 10rem;
-  background-image: url("/images/wall2.png");
-  min-height: 80vh; /* Ensure hero takes significant height */
-}
-
-.project-hero .col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.project-page-title h1 {
-  margin-bottom: 1em;
-  width: 100%;
-}
-
-.project-hero .row {
-  display: flex;
-  gap: 2em;
-  margin-bottom: 2em;
-  flex-wrap: wrap;
-}
-
-.project-hero .sub-col {
-  flex: 1;
-  min-width: 200px; /* Prevent sub-col from collapsing too small */
-}
-
-a,
-p {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: var(--copy);
-  will-change: transform;
-}
-
-.page h1 {
-  text-transform: uppercase;
-  font-family: "dh", sans-serif;
-  font-weight: lighter;
-  font-size: 7.5vw;
-  line-height: 0.85;
-  color: var(--copy);
-  will-change: transform;
-}
-
-.page h2 {
-  text-transform: uppercase;
-  font-family: "dh", sans-serif;
-  font-weight: lighter;
-  font-size: 4vw;
-  line-height: 0.85;
-  color: var(--copy);
-  will-change: transform;
-}
-
-.page h3 {
-  text-transform: uppercase;
-  font-family: "dm", sans-serif;
-  font-weight: lighter;
-  font-size: 2.25vw;
-  line-height: 0.85;
-  color: var(--copy);
-  will-change: transform;
-}
-
-/* Responsive adjustments */
-@media (max-width: 900px) {
+/* ===============================
+   VARIABLES
+   =============================== */
+   :root {
+    /* Colors */
+    --color-primary: #40422f;
+    --color-background: #ffffff;
+    --color-text: #40422f;
+    
+    /* Typography */
+    --font-family-display: "dh", sans-serif;
+    --font-family-body: "dm", sans-serif;
+    --font-size-body: 14px;
+    --line-height-heading: 0.85;
+    --line-height-body: 1.6;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    
+    /* Container */
+    --container-max-width: 1200px;
+    
+    /* Border Radius */
+    --border-radius: 12px;
+  }
+  
+  /* ===============================
+     BASE/RESET
+     =============================== */
   .page {
-    min-height: 100vh; /* Maintain full height on mobile */
-  }
-
-  .project-hero {
-    margin: 0 1rem;
-    padding: 2rem;
-  }
-
-  .project-hero .row {
+    min-height: 100vh;
+    min-width: 100%;
+    color: var(--color-text);
+    display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    background-size: cover;
+    background-position: center;
   }
-
-  .page h1 {
-    font-size: 12vw;
+  
+  /* ===============================
+     HERO SECTION
+     =============================== */
+  .project-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/wall2.png");
+    background-size: cover;
+    background-position: center;
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md);
+    border-radius: var(--border-radius);
+    overflow: hidden;
   }
-
-  .page h2 {
-    font-size: 10vw;
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    z-index: 1;
   }
-
-  .page h3 {
-    font-size: 8vw;
+  
+  .hero-title {
+    margin-bottom: var(--spacing-md);
   }
-}
+  
+  .hero-title h1 {
+    text-transform: uppercase;
+    font-family: var(--font-family-display);
+    font-weight: lighter;
+    font-size: clamp(3rem, 7.5vw, 7rem);
+    line-height: var(--line-height-heading);
+    color: var(--color-text);
+    will-change: transform;
+  }
+  
+  .hero-description {
+    max-width: 500px;
+    align-self: flex-end;
+  }
+  
+  .hero-description p {
+    text-transform: uppercase;
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    color: var(--color-text);
+    will-change: transform;
+  }
+  
+  /* ===============================
+     TYPOGRAPHY
+     =============================== */
+  h1, h2, h3 {
+    will-change: transform;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: var(--color-text);
+  }
+  
+  h1 {
+    font-family: var(--font-family-display);
+    font-size: clamp(3rem, 7.5vw, 7rem);
+    line-height: var(--line-height-heading);
+  }
+  
+  h2 {
+    font-family: var(--font-family-display);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: var(--line-height-heading);
+  }
+  
+  h3 {
+    font-family: var(--font-family-body);
+    font-size: clamp(1.5rem, 2.25vw, 2.5rem);
+    line-height: var(--line-height-heading);
+  }
+  
+  a, p {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    color: var(--color-text);
+    will-change: transform;
+  }
+  
+  /* ===============================
+     RESPONSIVE STYLES
+     =============================== */
+  @media (max-width: 1200px) {
+    .hero-title h1 {
+      font-size: clamp(2.5rem, 6vw, 6rem);
+    }
+    
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 6rem);
+    }
+    
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 3.5rem);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    :root {
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --font-size-body: 13px;
+    }
+    
+    .project-hero {
+      margin: var(--spacing-sm);
+      padding: var(--spacing-md);
+    }
+    
+    .hero-content {
+      max-width: 100%;
+    }
+    
+    .hero-description {
+      align-self: flex-start;
+      max-width: 100%;
+      margin-top: var(--spacing-sm);
+    }
+    
+    .hero-title h1 {
+      font-size: clamp(2rem, 5vw, 5rem);
+    }
+    
+    h1 {
+      font-size: clamp(2rem, 5vw, 5rem);
+    }
+    
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 3rem);
+    }
+    
+    h3 {
+      font-size: clamp(1.25rem, 2vw, 2rem);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    :root {
+      --font-size-body: 12px;
+      --spacing-md: 1.25rem;
+    }
+    
+    .hero-title h1 {
+      font-size: clamp(1.75rem, 4.5vw, 4rem);
+    }
+    
+    h1 {
+      font-size: clamp(1.75rem, 4.5vw, 4rem);
+    }
+    
+    h2 {
+      font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+    }
+    
+    h3 {
+      font-size: clamp(1rem, 1.75vw, 1.75rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    :root {
+      --spacing-md: 1rem;
+      --spacing-lg: 1.5rem;
+      --font-size-body: 11px;
+    }
+    
+    .project-hero {
+      margin: var(--spacing-xs);
+      min-height: 80vh;
+      padding: var(--spacing-sm);
+    }
+    
+    .hero-title h1 {
+      font-size: clamp(1.5rem, 4vw, 3.5rem);
+    }
+    
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 3.5rem);
+    }
+    
+    h2 {
+      font-size: clamp(1.2rem, 2.25vw, 2.25rem);
+    }
+    
+    h3 {
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
+    
+    .hero-description {
+      margin-top: var(--spacing-xs);
+    }
+  }
+  
+  @media (max-width: 360px) {
+    :root {
+      --font-size-body: 10px;
+    }
+    
+    .hero-title h1 {
+      font-size: clamp(1.25rem, 3.5vw, 3rem);
+    }
+    
+    h1 {
+      font-size: clamp(1.25rem, 3.5vw, 3rem);
+    }
+    
+    h2 {
+      font-size: clamp(1rem, 2vw, 2rem);
+    }
+  }

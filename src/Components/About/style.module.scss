@@ -1,74 +1,77 @@
 .container {
-
   padding: 4rem 1rem;
-  margin-bottom: 6rem;
+  margin: 0 2rem 6rem;
   display: flex;
   border-top: #fff;
   border-style: groove;
   justify-content: center;
   align-items: center;
-    border-radius: 12px;
+  border-radius: 12px;
   flex-flow: column;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding: 3.75rem 3rem 10rem;
+  padding: clamp(2rem, 5vw, 3.75rem) clamp(1.5rem, 4vw, 3rem) clamp(6rem, 10vw, 10rem);
   font-family: "dh", sans-serif;
-
   background-image: url("/images/wall8.png");
-  @media (min-width: 640px) {
-    padding: 4rem 1.5rem;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 1024px) {
+    margin: 0 1.5rem 5rem;
   }
 
-  @media (min-width: 1024px) {
-    padding: 4rem 2rem;
+  @media (max-width: 768px) {
+    margin: 0 1rem 4rem;
+  }
+
+  @media (max-width: 480px) {
+    margin: 0 0.5rem 3rem;
+    padding: clamp(1.5rem, 4vw, 2rem) clamp(1rem, 3vw, 1.5rem) clamp(4rem, 8vw, 6rem);
   }
 }
 
 .title {
   font-family: "dh", sans-serif;
-
-  font-size: 4.5rem;
-  margin-bottom: 3rem;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
   letter-spacing: 0.08em;
   text-align: center;
   color: #582c04;
-
-  @media (max-width: 768px) {
-    font-size: 3rem;
-  }
 }
 
 .introduction {
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
   line-height: 1.75;
   color: #582c04;
-  max-width: 90%;
-  margin: 0 auto 4rem;
+  max-width: min(90%, 800px);
+  margin: 0 auto clamp(2rem, 4vw, 4rem);
   text-align: center;
   text-transform: none;
-  @media (max-width: 768px) {
-    font-size: 1.25rem;
-  }
 }
 
 .divider {
   width: 100%;
   height: 1px;
   background-color: #E5E7EB;
-  margin: 4rem 0;
+  margin: clamp(2rem, 4vw, 4rem) 0;
 }
 
 .missionWrapper {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2rem, 3vw, 3rem);
+  width: 100%;
+  padding: 0 clamp(1rem, 2vw, 2rem);
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    padding: 0 1rem;
+  }
 }
 
 .mission {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.75;
   color: #582c04;
-  max-width: 60%;
+  max-width: min(60%, 700px);
   text-align: right;
 
   @media (max-width: 768px) {
@@ -80,9 +83,11 @@
 .buttonWrapper {
   display: flex;
   justify-content: flex-end;
+  padding: 0 clamp(1rem, 2vw, 2rem);
 
   @media (max-width: 768px) {
     justify-content: center;
+    padding: 0 1rem;
   }
 }
 
