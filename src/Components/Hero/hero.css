@@ -3,9 +3,9 @@
    =============================== */
    :root {
     /* Colors */
-    --color-primary: #40422f;
+    --color-primary: #363c03;
     --color-background: #ffffff;
-    --color-text: #40422f;
+    --color-text: #363c03;
     
     /* Typography */
     --font-family-display: "dh", sans-serif;
@@ -225,11 +225,12 @@
     }
     
     .hero-title h1 {
-      font-size: clamp(1.5rem, 4vw, 3.5rem);
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-weight: bold;
     }
     
     h1 {
-      font-size: clamp(1.5rem, 4vw, 3.5rem);
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
     }
     
     h2 {

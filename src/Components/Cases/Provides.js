@@ -5,7 +5,8 @@ const all_items = [
     detail: "Our premium wallpaper collection features designs from classic to contemporary, with easy installation and long-lasting quality.",
     src: "/images/slip1.webp",
     url: "/services/wallpapers",
-    color: "#F5F5F5", // Light neutral shade
+    color: "#D9C5A0 ",
+    backgroundImage:"/images/pos2.png", // Light neutral shade
     font: "#3E2723"
   },
   {
@@ -14,7 +15,8 @@ const all_items = [
     detail: "Work with our designers to create one-of-a-kind wallpapers that perfectly match your vision and interior design scheme.",
     src: "/images/slip2.webp",
     url: "/services/custom-wallpapers",
-    color: "#FAFAFA", // Slightly off-white
+    color: "#FAFAFA",
+    backgroundImage:"/images/pos3.png", // Slightly off-white
     font: "#3E2723"
   },
   {
@@ -23,7 +25,8 @@ const all_items = [
     detail: "Choose from venetian, roller, roman, and vertical styles in various materials including wood, aluminum, and fabric.",
     src: "/images/blind.webp",
     url: "/services/blinds",
-    color: "#FFF8E1", // Soft warm white
+    color: "#FFF8E1",
+    backgroundImage:"/images/pos4.png",
     font: "#3E2723"
   },
   {
@@ -32,7 +35,8 @@ const all_items = [
     detail: "UV-resistant, durable synthetic turf that looks and feels natural with none of the watering, mowing, or fertilizing.",
     src: "/images/grass.jpg",
     url: "/services/artificial-grass",
-    color: "#F1F8E9", // Very light green tint
+    color: "#F1F8E9",
+    backgroundImage:"/images/wall10.png", // Very light green tint
     font: "#3E2723"
   },
   {
@@ -41,7 +45,8 @@ const all_items = [
     detail: "Create stunning biophilic designs that improve air quality, reduce noise, and enhance well-being in any environment.",
     src: "/images/garde.webp",
     url: "/services/vertical-garden",
-    color: "#E8F5E9", // Subtle greenish white
+    color: "#E8F5E9", 
+    backgroundImage:"/images/wall2.png",// Subtle greenish white
     font: "#3E2723"
   },
   {
@@ -50,7 +55,8 @@ const all_items = [
     detail: "From frosted and patterned to mirrored and solar control films that enhance security while reducing energy costs.",
     src: "/images/glass.webp",
     url: "/services/window-film",
-    color: "#ECEFF1", // Light grayish blue
+    color: "#ECEFF1",
+    backgroundImage:"/images/wall16.png", // Light grayish blue
     font: "#3E2723"
   },
   {
@@ -59,7 +65,8 @@ const all_items = [
     detail: "Our experienced team handles everything from measurement to final installation with attention to detail and quality craftsmanship.",
     src: "/images/workers.webp",
     url: "/services/installation",
-    color: "#FBE9E7", // Soft peach tint
+    color: "#FBE9E7",
+    backgroundImage:"/images/pos2.png", // Soft peach tint
     font: "#3E2723"
   }
 ];

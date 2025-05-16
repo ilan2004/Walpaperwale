@@ -4,7 +4,7 @@ import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import './Card.css';
 
-const Card = ({ i, title, font, description, src, url, detail, color, progress, range, targetScale }) => {
+const Card = ({ i, title, font, description, src, url, detail, backgroundImage, color, progress, range, targetScale }) => {
   const container = useRef(null);
   
   const { scrollYProgress } = useScroll({
@@ -20,7 +20,9 @@ const Card = ({ i, title, font, description, src, url, detail, color, progress, 
       <div className="cardContainer-inside">
         <motion.div
           style={{
-            background: ` ${color}`,
+            background: backgroundImage ? `url(${backgroundImage})` : `${color}`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             color: font,
             scale, 
             top: `calc(-5vh + ${i * 25}px)`
