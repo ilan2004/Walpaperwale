@@ -3,6 +3,7 @@
 import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import './Card.css';
+import Link from 'next/link';
 
 const Card = ({ i, title, font, description, src, url, detail, backgroundImage, color, progress, range, targetScale }) => {
   const container = useRef(null);
@@ -34,6 +35,9 @@ const Card = ({ i, title, font, description, src, url, detail, backgroundImage, 
             <div className="description">
               <p className="desp">{description}</p>
               <span className="detail-text">{detail}</span>
+              <Link href="/portfolio" className="see-more-btn">
+                See More
+              </Link>
             </div>
             
             <div className="imageContainer">

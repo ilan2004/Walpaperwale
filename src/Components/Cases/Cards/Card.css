@@ -120,3 +120,18 @@
 .card:hover .imaged {
   transform: scale(1.05);
 }
+.see-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: inherit;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
