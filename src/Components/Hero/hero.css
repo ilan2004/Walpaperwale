@@ -57,6 +57,7 @@
     margin: var(--spacing-md);
     border-radius: var(--border-radius);
     overflow: hidden;
+    filter:brightness(110%)
   }
   
   .hero-content {

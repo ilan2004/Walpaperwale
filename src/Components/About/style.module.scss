@@ -17,6 +17,7 @@
   @media (max-width: 1024px) {
     margin: 0 1.5rem 5rem;
   }
+  
 
   @media (max-width: 768px) {
     margin: 0 1rem 4rem;
@@ -32,12 +33,12 @@
   font-family: "dh", sans-serif;
   font-size: clamp(2rem, 5vw, 4.5rem);
   margin-bottom: clamp(2rem, 4vw, 3rem);
-  letter-spacing: 0.08em;
   text-align: center;
   color: #582c04;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
 }
 
-.introduction {
+.introduction, .mission {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   line-height: 1.75;
   color: #582c04;
@@ -45,6 +46,7 @@
   margin: 0 auto clamp(2rem, 4vw, 4rem);
   text-align: center;
   text-transform: none;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .divider {
@@ -90,6 +92,16 @@
     justify-content: center;
     padding: 0 1rem;
   }
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.85);  // Increased opacity for better contrast
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  margin: 0 auto;
 }
 
 

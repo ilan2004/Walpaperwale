@@ -40,6 +40,7 @@ export default function Navbarproject() {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     transition: 'all 0.5s ease-in-out',
+
   };
 
   const textColor = scrolled ? colors.primary : colors.white;
