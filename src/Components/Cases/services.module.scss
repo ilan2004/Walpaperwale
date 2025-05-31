@@ -6,6 +6,7 @@
   margin-right: clamp(0.25rem, 1.5vw, 2rem);
   padding: clamp(1.5rem, 3vw, 3.75rem) clamp(0.75rem, 2vw, 3rem) clamp(3rem, 6vw, 10rem);
   display: flex;
+  padding-bottom: 10rem;
   background-image: url("https://res.cloudinary.com/dihv4duqb/image/upload/v1748685702/wall9_anonwg.png");
 }
 
@@ -30,11 +31,15 @@
     margin-left: 0.25rem;
     margin-right: 0.25rem;
     padding: 1rem 0.5rem 3rem;
+    margin-top: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
   }
   .cardsContainer {
     margin-bottom: 3rem;
   }
   .topic {
+    padding-bottom: 3rem;
     padding-top: 15px;
     margin-bottom: 0.75rem;
   }
