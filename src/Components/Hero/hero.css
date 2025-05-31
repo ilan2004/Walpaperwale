@@ -83,7 +83,7 @@
     text-transform: uppercase;
     font-family: var(--font-family-display);
     font-weight: lighter;
-    font-size: clamp(3rem, 7.5vw, 7rem);
+    font-size: clamp(2.5rem, 7.5vw, 7rem);
     line-height: var(--line-height-heading);
     color: var(--color-text);
     will-change: transform;
@@ -115,7 +115,7 @@
   
   h1 {
     font-family: var(--font-family-display);
-    font-size: clamp(3rem, 7.5vw, 7rem);
+    font-size: clamp(2.5rem, 7.5vw, 7rem);
     line-height: var(--line-height-heading);
   }
   
@@ -188,7 +188,7 @@
     }
     
     h2 {
-      font-size: clamp(1.5rem, 3vw, 3rem);
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
     
     h3 {
@@ -238,7 +238,7 @@
     }
     
     h1 {
-      font-size: clamp(3rem, 4vw, 3.5rem);
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
     }
     
     h2 {
