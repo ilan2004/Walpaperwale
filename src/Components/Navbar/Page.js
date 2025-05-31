@@ -51,7 +51,7 @@ export default function NavbarV() {
     <Navbar className="shadow-sm" style={navbarStyle}>
       <NavbarBrand>
         <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <img src="/images/logo.png" alt="Wallpaperwale" className={styles.logo} />
+          <img src="/images/wallpaper.png" alt="Wallpaperwale" className={styles.logo} />
           <p className="font-bold" style={{ color: textColor, transition: 'color 0.5s ease-in-out' }}>
             Wallpaperwale
           </p>

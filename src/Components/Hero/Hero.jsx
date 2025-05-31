@@ -5,6 +5,7 @@ import Lenis from "lenis";
 import "./hero.css";
 import AnimatedH1 from "../Animation/AnimatedH1/AnimatedH1";
 import AnimatedCopy from "../Animation/AnimatedCopy/AnimatedCopy";
+import CloudinaryImage from "../CloudinaryImage";
 
 export const Hero = () => {
   const lenisRef = useRef(null);
@@ -32,6 +33,13 @@ export const Hero = () => {
   return (
     <div className="page">
       <section className="project-hero">
+        {/* CloudinaryImage as a background */}
+        <CloudinaryImage
+          publicId="wall2_iybooi" // Replace with your Cloudinary public ID for the image
+          className="hero-background"
+          alt="Background wallpaper"
+          fill // Assuming CloudinaryImage supports a 'fill' prop for full coverage
+        />
         <div className="col">
           <div className="container">
             <div className="project-page-title">
