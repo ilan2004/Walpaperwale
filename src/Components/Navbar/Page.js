@@ -70,7 +70,7 @@ export default function NavbarV() {
         </NavbarItem>
         <NavbarItem>
           <Link 
-            href="/services" 
+            href="#Services" 
             style={{ color: textColor, transition: 'color 0.5s ease-in-out' }}
             className="hover:opacity-80 transition-opacity duration-300"
           >
