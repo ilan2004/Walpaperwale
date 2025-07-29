@@ -1,10 +1,13 @@
 'use client'
 
 import React, { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
 import styles from './Navbar.module.scss';
 
 export default function Navbarproject() {
+  const router = useRouter();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   
   // Color palette for scrolled and non-scrolled states
@@ -71,7 +74,13 @@ export default function Navbarproject() {
         </NavbarItem>
         <NavbarItem>
           <Link 
-            href="/services" 
+            href="/#Services" 
+            onClick={(e)=>{
+              if(pathname!=="/"){
+                e.preventDefault();
+                router.push('/#Services');
+              }
+            }}
             style={{ color: textColor, transition: 'color 0.5s ease-in-out' }}
             className="hover:opacity-80 transition-opacity duration-300"
           >
